@@ -6,10 +6,9 @@ const Navbar = () => {
         <nav className="nav-wrapper indigo accent-1">
             <div className="container">
                 <ul>
-
-                <li><NavLink exact to="/">HOMEBOI</NavLink></li>
-                <li><NavLink to="/about">ABOUT</NavLink></li>
-                <li><NavLink to="/contact">CONTACT</NavLink></li>
+                    <li><NavLink exact to="/">HOMEBOI</NavLink></li>
+                    <li><NavLink to="/about">ABOUT</NavLink></li>
+                    <li><NavLink to="/contact">CONTACT</NavLink></li>
                 </ul>
             </div>
             
