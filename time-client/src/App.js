@@ -9,7 +9,6 @@ class  App extends Component {
   render(){
   return (
     <div className="App">
-      HI. THIS IS APP Component 
       <Router>
         <Navbar/>
         <Switch>

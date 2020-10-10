@@ -11,17 +11,17 @@ class TaskList extends Component {
 
     renderWhenYouHaveIt = () => {
         if (this.props.loading){
-            return <div>wait</div>
+            return <div>LOADING YOUR RESPONSIBILITIES</div>
         } else {
-            return this.props.tasks.tasks.map(task => <TaskCard task={task}/>)
+            return this.props.tasks.tasks.map(task => <TaskCard key={task.id} task={task}/>)
         }
     }
 
     render() {
 
         return (
-            <div >
-                GIVE ME MY TASKS
+            <div className="pink lighten-2">
+                THIS IS THE TASKLIST COMPONENT
                 {this.renderWhenYouHaveIt()}
             </div>
         )

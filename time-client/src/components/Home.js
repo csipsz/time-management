@@ -6,7 +6,7 @@ const Home = () => {
         <div>
         <TaskList/>
         <div>
-            THIS IS MY HOME COMPONENR
+            THIS IS MY HOME COMPONENT, WHICH HAS TASKLIST INSIDE
         </div>
         </div>
     )

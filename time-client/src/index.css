@@ -1,0 +1,10 @@
+.react-logo {
+    position: relative;
+    top: 85px;
+    left: -100px;
+    opacity: 0.6;
+  }
+
+  .card-panel {
+      overflow: hidden;
+  }
