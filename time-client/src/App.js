@@ -15,6 +15,7 @@ class  App extends Component {
           <Route exact path='/' component={Home}/>
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
+          <Route render={ () => <div className="red darken-3">PAGE NOT FOUND</div>} />
         </Switch>
       </Router>
     </div>
