@@ -1,17 +1,28 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import fetchTasks from '../actions/taskActions'
+import TaskCard from '../components/TaskCard';
 
-export class TaskList extends Component {
+class TaskList extends Component {
 
-    handleClick = (e) => {
+    componentDidMount(){
         this.props.fetchTasks()
     }
 
+    renderWhenYouHaveIt = () => {
+        if (this.props.loading){
+            return <div>wait</div>
+        } else {
+            return this.props.tasks.tasks.map(task => <TaskCard task={task}/>)
+        }
+    }
+
     render() {
+
         return (
-            <div onClick={this.handleClick}>
-                TASKLIST COMPONENT
+            <div >
+                GIVE ME MY TASKS
+                {this.renderWhenYouHaveIt()}
             </div>
         )
     }
@@ -19,7 +30,7 @@ export class TaskList extends Component {
 
 const mapStateToProps = state => {
     return {
-      tasks: state, 
+      tasks: state.tasks, 
       loading: state.loading
     }
   }
