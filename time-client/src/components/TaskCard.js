@@ -5,8 +5,8 @@ const TaskCard = (props) => {
     return (
         <div className="row container">
         <div className="card-panel col s12 m5 pink darken-4">
-        <div>{props.task.title}</div>
-        <div>{props.task.day}</div>
+        <h2><b>{props.task.title}</b></h2>
+        <h4>{props.task.day}</h4>
         <p>{props.task.description}</p>
         <img className="react-logo" src={ReactLogo}/>
       </div>

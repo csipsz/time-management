@@ -8,4 +8,29 @@ const fetchTasks = () => {
 
 }
 
+const addTask = (task) => {
+    return {
+        type: 'ADD_TASK', 
+        task
+    }
+}
+
+export const createTask = (taskInfo, history) => {
+    return (dispatch) => {
+        fetch('http://localhost:3001/tasks', {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(taskInfo)
+        })
+            .then( resp => resp.json() )
+            .then( task => {
+                dispatch(addTask(task))
+                history.push('/')
+            })
+    }
+}
+
 export default fetchTasks

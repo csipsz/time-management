@@ -12,6 +12,13 @@ const taskReducer = (state={tasks: [], loading: false}, action) => {
                 tasks: action.tasks, 
                 loading: false
             }
+        case "ADD_TASK":
+            return {
+                ...state,
+                tasks: state.tasks.concat(action.task), 
+                loading: false
+            }
+
         default: 
         return state
     }
