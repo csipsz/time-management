@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import fetchTasks from '../actions/taskActions'
+import {removeTask} from '../actions/taskActions'
 import TaskCard from '../components/TaskCard';
 
 class TaskList extends Component {
@@ -13,7 +14,7 @@ class TaskList extends Component {
         if (this.props.loading){
             return <div>LOADING YOUR RESPONSIBILITIES</div>
         } else {
-            return this.props.tasks.tasks.map(task => <TaskCard key={task.id} task={task}/>)
+            return this.props.tasks.tasks.map(task => <TaskCard key={task.id} task={task} delete={this.props.delete}/>)
         }
     }
 
@@ -37,7 +38,8 @@ const mapStateToProps = state => {
   
   const mapDispatchToProps = dispatch => {
     return {
-    fetchTasks: () => dispatch(fetchTasks())
+    fetchTasks: () => dispatch(fetchTasks()), 
+    delete: task => dispatch(removeTask(task))
     }
   }
 

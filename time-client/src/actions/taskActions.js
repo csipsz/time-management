@@ -8,12 +8,6 @@ const fetchTasks = () => {
 
 }
 
-const addTask = (task) => {
-    return {
-        type: 'ADD_TASK', 
-        task
-    }
-}
 
 export const createTask = (taskInfo, history) => {
     return (dispatch) => {
@@ -25,11 +19,35 @@ export const createTask = (taskInfo, history) => {
             },
             body: JSON.stringify(taskInfo)
         })
-            .then( resp => resp.json() )
-            .then( task => {
-                dispatch(addTask(task))
-                history.push('/')
-            })
+        .then( resp => resp.json() )
+        .then( task => {
+            dispatch(addTask(task))
+            //history.push('/')
+        })
+    }
+}
+
+const addTask = (task) => {
+    return {
+        type: 'ADD_TASK', 
+        task
+    }
+}
+
+export const removeTask = (taskInfo) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3001/tasks/${taskInfo.id}`, {
+            method: "delete",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(taskInfo)
+        })
+        .then( resp => resp.json() )
+        .then( task => {
+            console.log("deleted")
+        })
     }
 }
 
