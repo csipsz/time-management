@@ -19,10 +19,11 @@ export class TaskForm extends Component {
 
         const task = {
             task: this.state
-
         }
 
-        this.props.createTask(task, this.props.history)
+        this.props.createTask(task)
+
+        this.props.history.push('/')
     }
 
     handleChange = (e) => {

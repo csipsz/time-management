@@ -3,7 +3,6 @@ import ReactLogo from '../logo192.png'
 
 const TaskCard = (props) => {
 
-
     return (
         <div className="task-card pink darken-4">
           <button onClick={() => props.delete(props.task)} className="right btn blue lighten-2">X</button>

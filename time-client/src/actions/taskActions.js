@@ -9,7 +9,7 @@ const fetchTasks = () => {
 }
 
 
-export const createTask = (taskInfo, history) => {
+export const createTask = (taskInfo) => {
     return (dispatch) => {
         fetch('http://localhost:3001/tasks', {
             method: "POST",
@@ -22,7 +22,6 @@ export const createTask = (taskInfo, history) => {
         .then( resp => resp.json() )
         .then( task => {
             dispatch(addTask(task))
-            //history.push('/')
         })
     }
 }

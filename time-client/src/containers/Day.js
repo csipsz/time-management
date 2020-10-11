@@ -12,7 +12,7 @@ export class Day extends Component {
 
     renderWhenYouHaveIt = () => {
         if (this.props.loading){
-            return <div>LOADING YOUR RESPONSIBILITIES</div>
+            return <div>LOADING...</div>
         } else {
             return this.props.tasks.tasks.map(task => {
                 if (task.day === this.props.name){
