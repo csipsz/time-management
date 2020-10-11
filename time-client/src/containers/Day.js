@@ -34,7 +34,7 @@ export class Day extends Component {
     render() {
 
         return (
-            <div className="pink lighten-2 customize">
+            <div className="indigo customize">
                 <h4 className="day-name">{this.props.name.toUpperCase()}</h4>
                 {this.renderWhenYouHaveIt()}
             </div>

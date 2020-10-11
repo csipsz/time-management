@@ -7,8 +7,7 @@ const fetchTasks = () => {
     }
 
 }
-
-
+///////////////////////////////////////////////////////////////////////////////////////////
 export const createTask = (taskInfo) => {
     return (dispatch) => {
         fetch('http://localhost:3001/tasks', {
@@ -33,17 +32,13 @@ const addTask = (task) => {
     }
 }
 
-// const refreshTask = (task) => {
-//     return {
-//         type: 'UPDATE_TASK', 
-//         task
-//     }
-// }
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 export const removeTask = (taskInfo) => {
     return (dispatch) => {
         fetch(`http://localhost:3001/tasks/${taskInfo.id}`, {
-            method: "delete",
+            method: "DELETE",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -51,9 +46,21 @@ export const removeTask = (taskInfo) => {
             body: JSON.stringify(taskInfo)
         })
         .then( resp => resp.json() )
-        .then( task => console.log(task))
-    }
+        .then( task => {
+            dispatch(deleteTask(task))
+    })
 }
+}
+
+const deleteTask = (task) => {
+    return {
+        type: 'DELETE_TASK', 
+        task
+    }
+} 
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
 
 export const updateTask = (taskInfo) => {
     return (dispatch) => {
@@ -69,5 +76,12 @@ export const updateTask = (taskInfo) => {
         .then( task => console.log(task))
         }
     }
+
+// const refreshTask = (task) => {
+//     return {
+//         type: 'UPDATE_TASK', 
+//         task
+//     }
+// }
 
 export default fetchTasks
