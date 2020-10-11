@@ -1,10 +1,31 @@
 .react-logo {
     position: relative;
-    top: 85px;
     left: -100px;
     opacity: 0.6;
+    top: 85px;
   }
 
-  .card-panel {
+  .task-card {
       overflow: hidden;
   }
+
+  .customize {
+    float: left;
+    width: 13.5%;
+    margin: 5px;
+    border: 5px solid;
+  }
+
+  .day-name {
+      text-align: center;
+      font-family: fantasy;
+  }
+
+  .schedule {
+      border: black 2px solid;
+      background-color: cornflowerblue;
+      height: 1000px;
+      overflow: hidden;
+  }
+
+

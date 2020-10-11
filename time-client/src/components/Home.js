@@ -1,16 +1,6 @@
 import React from 'react'
-import TaskForm from '../containers/TaskForm'
-import TaskList from '../containers/TaskList'
+import Week from '../containers/Week'
 
-const Home = () => {
-    return (
-        <div>
-        <TaskList/>
-        <div>
-            THIS IS MY HOME COMPONENT, WHICH HAS TASKLIST INSIDE
-        </div>
-        </div>
-    )
-}
+const Home = () => <Week/>
 
 export default Home

@@ -16,7 +16,7 @@ export class Day extends Component {
         } else {
             return this.props.tasks.tasks.map(task => {
                 if (task.day === this.props.name){
-                 return <TaskCard key={task.id} task={task}/>}
+                 return <TaskCard key={task.id} task={task} delete={this.props.delete}/>}
                 })
         }
     }
@@ -24,8 +24,8 @@ export class Day extends Component {
     render() {
 
         return (
-            <div className="pink lighten-2">
-                WE ARE INSIDE DAY
+            <div className="pink lighten-2 customize">
+                <h4 className="day-name">{this.props.name.toUpperCase()}</h4>
                 {this.renderWhenYouHaveIt()}
             </div>
         )
