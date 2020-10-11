@@ -3,18 +3,16 @@ import Day from './Day'
 
 export class Week extends Component {
 
-    state = {
-        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    }
-
-    getDays = () => this.state.days.map((day, idx) => <Day key={idx} name={day}/>)
+    getDays = () => this.props.days.map((day, idx) => <Day key={idx} name={day}/>)
     render() {
 
         return (
+            <>
+            <h4 className="weekplan">The weekly plan</h4>
             <div className="schedule">
-                <h4>The weekly plan</h4>
                 {this.getDays()}
             </div>
+            </>
         )
     }
 }

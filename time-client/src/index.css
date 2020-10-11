@@ -7,13 +7,14 @@
 
   .task-card {
       overflow: hidden;
+      border: black solid;
   }
 
   .customize {
     float: left;
     width: 13.5%;
-    margin: 5px;
-    border: 5px solid;
+    border: 2px solid;
+    margin: 4px
   }
 
   .day-name {
@@ -22,10 +23,16 @@
   }
 
   .schedule {
-      border: black 2px solid;
+      border: black 4px solid;
       background-color: cornflowerblue;
       height: 1000px;
       overflow: hidden;
+  }
+
+  .weekplan {
+      text-align: center;
+      font-weight: 700;
+      padding-top: 100px;
   }
 
 
