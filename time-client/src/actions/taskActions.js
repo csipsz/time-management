@@ -45,9 +45,7 @@ export const removeTask = (taskInfo) => {
             body: JSON.stringify(taskInfo)
         })
         .then( resp => resp.json() )
-        .then( task => {
-            console.log("deleted")
-        })
+        .then( task => console.log(task))
     }
 }
 

@@ -5,7 +5,6 @@ import TaskList from '../containers/TaskList'
 const Home = () => {
     return (
         <div>
-        <TaskForm/>
         <TaskList/>
         <div>
             THIS IS MY HOME COMPONENT, WHICH HAS TASKLIST INSIDE
