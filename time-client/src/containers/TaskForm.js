@@ -10,7 +10,8 @@ export class TaskForm extends Component {
         this.state = {
             title: "", 
             day: "", 
-            description: ""
+            description: "", 
+            completed: false
         }
     }
 

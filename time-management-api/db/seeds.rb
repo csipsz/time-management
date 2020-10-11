@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Task.create(day: 'Monday', title: "Funfair", description: 'Go and buy some cotton candy and throw it back up from Titanic')
-Task.create(day: 'Tuesday', title: "Circus", description: 'Bribe the Clown')
-Task.create(day: 'Wednesday', title: "Movie Theater", description: 'Jalapeno eating contest while watching a horror movie')
-Task.create(day: 'Thursday', title: "Opera", description: 'Behave  nice for once')
-Task.create(day: 'Friday', title: "Zoo", description: 'Feeding Giraffes even though the sign says not to')
+Task.create(completed: false, day: 'Monday', title: "Funfair", description: 'Go and buy some cotton candy and throw it back up from Titanic')
+Task.create(completed: false, day: 'Tuesday', title: "Circus", description: 'Bribe the Clown')
+Task.create(completed: false, day: 'Wednesday', title: "Movie Theater", description: 'Jalapeno eating contest while watching a horror movie')
+Task.create(completed: false, day: 'Thursday', title: "Opera", description: 'Behave  nice for once')
+Task.create(completed: false, day: 'Friday', title: "Zoo", description: 'Feeding Giraffes even though the sign says not to')

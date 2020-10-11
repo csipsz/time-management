@@ -33,6 +33,13 @@ const addTask = (task) => {
     }
 }
 
+const refreshTask = (task) => {
+    return {
+        type: 'UPDATE_TASK', 
+        task
+    }
+}
+
 export const removeTask = (taskInfo) => {
     return (dispatch) => {
         fetch(`http://localhost:3001/tasks/${taskInfo.id}`, {
@@ -47,5 +54,20 @@ export const removeTask = (taskInfo) => {
         .then( task => console.log(task))
     }
 }
+
+export const updateTask = (taskInfo) => {
+    return (dispatch) => {
+        fetch(`http://localhost:3001/tasks/${taskInfo.id}`, {
+            method: "PATCH",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(taskInfo)
+        })
+        .then( resp => resp.json() )
+        .then( task => console.log(task))
+        }
+    }
 
 export default fetchTasks

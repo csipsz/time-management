@@ -6,6 +6,7 @@ const TaskCard = (props) => {
     return (
         <div className="task-card pink darken-4">
           <button onClick={() => props.delete(props.task)} className="right btn blue lighten-2">X</button>
+          <button id={props.task.id} onClick={(e) => props.completion(e.target)} className="right btn blue lighten-2">✓</button>
           <b>{props.task.title}</b><br/>
           <b>{props.task.day}</b>
           <p>{props.task.description}</p>
