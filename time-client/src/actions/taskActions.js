@@ -33,12 +33,12 @@ const addTask = (task) => {
     }
 }
 
-const refreshTask = (task) => {
-    return {
-        type: 'UPDATE_TASK', 
-        task
-    }
-}
+// const refreshTask = (task) => {
+//     return {
+//         type: 'UPDATE_TASK', 
+//         task
+//     }
+// }
 
 export const removeTask = (taskInfo) => {
     return (dispatch) => {
