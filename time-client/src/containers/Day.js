@@ -15,12 +15,11 @@ export class Day extends Component {
         button.className = "right btn green lighten-2"
         let completedTask = this.props.tasks.tasks.find(task => task.id == button.id)
         completedTask.completed = true
-        console.log(completedTask)
         this.props.update(completedTask)
 
     }
 
-    renderWhenYouHaveIt = () => {
+    handleLoading = () => {
         if (this.props.loading){
             return <div>LOADING...</div>
         } else {
@@ -36,7 +35,7 @@ export class Day extends Component {
         return (
             <div className="indigo customize">
                 <h4 className="day-name">{this.props.name.toUpperCase()}</h4>
-                {this.renderWhenYouHaveIt()}
+                {this.handleLoading()}
             </div>
         )
     }

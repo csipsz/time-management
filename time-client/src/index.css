@@ -1,8 +1,8 @@
 .react-logo {
     position: relative;
-    left: -100px;
+    left: -78px;
     opacity: 0.6;
-    top: 85px;
+    top: 83px;
   }
 
   .task-card {
@@ -41,4 +41,21 @@
       background-color:grey;
   }
 
+
+  #clock {
+      width: 1655px;
+      margin-top: 30px;
+      border-radius: 1%;
+  }
+
+  .about {
+      background-image: url(pic.png);
+      height: 850px;
+  }
+
+  .appinfo {
+      opacity: 02;
+      background-color: darkblue;
+      
+  }
 

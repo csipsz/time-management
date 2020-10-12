@@ -8,7 +8,7 @@ const fetchTasks = () => {
 
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
-export const createTask = (taskInfo) => {
+export const createTask = (taskBack) => {
     return (dispatch) => {
         fetch('http://localhost:3001/tasks', {
             method: "POST",
@@ -16,7 +16,7 @@ export const createTask = (taskInfo) => {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(taskInfo)
+            body: JSON.stringify(taskBack)
         })
         .then( resp => resp.json() )
         .then( task => {
@@ -35,15 +35,15 @@ const addTask = (task) => {
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-export const removeTask = (taskInfo) => {
+export const removeTask = (taskBack) => {
     return (dispatch) => {
-        fetch(`http://localhost:3001/tasks/${taskInfo.id}`, {
+        fetch(`http://localhost:3001/tasks/${taskBack.id}`, {
             method: "DELETE",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(taskInfo)
+            body: JSON.stringify(taskBack)
         })
         .then( resp => resp.json() )
         .then( task => {
@@ -62,26 +62,27 @@ const deleteTask = (task) => {
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
-export const updateTask = (taskInfo) => {
+export const updateTask = (taskBack) => {
     return (dispatch) => {
-        fetch(`http://localhost:3001/tasks/${taskInfo.id}`, {
+        fetch(`http://localhost:3001/tasks/${taskBack.id}`, {
             method: "PATCH",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(taskInfo)
+            body: JSON.stringify(taskBack)
         })
         .then( resp => resp.json() )
-        .then( task => console.log(task))
+        .then( task => dispatch(completeTask(task)))
         }
     }
 
-// const refreshTask = (task) => {
-//     return {
-//         type: 'UPDATE_TASK', 
-//         task
-//     }
-// }
+const completeTask = (task) => {
+    return {
+        type: 'UPDATE_TASK', 
+        task
+    }
+}
+
 
 export default fetchTasks

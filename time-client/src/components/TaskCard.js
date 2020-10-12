@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom'
 const TaskCard = (props) => {
 
     return (
-        <div className="task-card pink darken-4">
+        <div className="task-card brown">
           <button onClick={() => props.delete(props.task)} className="right btn red lighten-2">X</button>
           <button id={props.task.id} onClick={(e) => props.completion(e.target)} className={props.task.completed ? "right btn green lighten-2" :"right btn blue lighten-2" }>✓</button>
           {/*<button onClick={(e) => props.history.push('/form')} className={"right btn amber lighten-2"}>+</button>*/}
