@@ -6,7 +6,7 @@ The background is created with flaticon.
 
 <h2>INSTRUCTIONS:</h2>
 
-<h3>RAILS BACK END:<h3>
+<h3>RAILS BACK END:</h3>
 To run this app on your local environment, clone this repository.
 
 Navigate to the time-management-api directory and run:
@@ -19,7 +19,7 @@ Then ran the server with the rails s command
 
 This will boot up the Rails web server at http://localhost:3000.
 
-<h3>The REACT FRONT END:<h3>
+<h3>The REACT FRONT END:</h3>
 
 Navigate to the time-client directory
 
