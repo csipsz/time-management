@@ -17,7 +17,7 @@ rails db:migrate
 
 Then ran the server with the rails s command
 
-This will boot up the Rails web server at http://localhost:3000.
+This will boot up the Rails web server at http://localhost:3001.
 
 <h3>The REACT FRONT END:</h3>
 
