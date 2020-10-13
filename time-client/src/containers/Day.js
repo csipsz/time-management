@@ -7,13 +7,13 @@ import TaskCard from '../components/TaskCard';
 
 export class Day extends Component {
 
-    componentDidMount(){
-        this.props.fetchTasks()
-    }
+    // componentDidMount(){
+    //     this.props.fetchTasks()
+    // }
 
     completion = (button) => {
         button.className = "right btn green lighten-2"
-        let completedTask = this.props.tasks.tasks.find(task => task.id == button.id)
+        let completedTask = this.props.tasks.find(task => task.id == button.id)
         completedTask.completed = true
         this.props.update(completedTask)
 
@@ -23,7 +23,7 @@ export class Day extends Component {
         if (this.props.loading){
             return <div>LOADING...</div>
         } else {
-            return this.props.tasks.tasks.map(task => {
+            return this.props.tasks.map(task => {
                 if (task.day.toUpperCase() === this.props.name.toUpperCase()){
                  return <TaskCard key={task.id} task={task} delete={this.props.delete} completion={this.completion}/>}
                 })
@@ -44,7 +44,7 @@ export class Day extends Component {
 
 const mapStateToProps = state => {
     return {
-      tasks: state.tasks, 
+      tasks: state.task.tasks, 
       loading: state.loading
     }
   }

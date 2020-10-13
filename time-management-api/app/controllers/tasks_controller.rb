@@ -36,6 +36,7 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   def destroy
     @task.destroy
+    render json: @task
   end
 
   private

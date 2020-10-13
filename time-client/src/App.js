@@ -5,8 +5,16 @@ import Home from './components/Home'
 import Contact from './components/Contact' 
 import About from './components/About'
 import TaskForm from './containers/TaskForm';
+import { connect } from 'react-redux'
+import fetchTasks from './actions/taskActions'
 
 class  App extends Component {
+
+  componentDidMount(){
+        this.props.fetchTasks()
+    }
+
+
   render(){
   return (
     <div className="App">
@@ -25,4 +33,12 @@ class  App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+  fetchTasks: () => dispatch(fetchTasks())
+  
+  }
+}
+
+
+export default connect(null, mapDispatchToProps)(App);
