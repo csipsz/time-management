@@ -33,12 +33,14 @@
   .weekplan {
       text-align: center;
       font-weight: 700;
-      padding-top: 100px;
-      background-color: grey;
+      padding: 50px;
+      font-family: fantasy;
+      background-color: brown darken-2;
   }
 
   .App {
-      background-color:grey;
+      
+      background-color: grey;
   }
 
 
@@ -48,14 +50,20 @@
       border-radius: 1%;
   }
 
-  .about {
-      background-image: url(pic.png);
-      height: 850px;
+.appinfo {
+    background-image: url(pic.png);
+    height: 850px; 
   }
 
-  .appinfo {
-      opacity: 02;
-      background-color: darkblue;
-      
+  .appdetails {
+      padding: 1px;
+      color: white;
+      font-size: large;
+      text-align: center;
+  }
+
+  .digital-clock{
+      color: rgb(236, 81, 164);
+      border: double black 7px;
   }
 

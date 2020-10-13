@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Day from './Day'
+import Clock from './Clock'
 
 export class Week extends Component {
 
@@ -8,7 +9,9 @@ export class Week extends Component {
 
         return (
             <>
-            <h4 className="weekplan">The weekly plan</h4>
+            <h4 className="weekplan">
+                {<Clock/>}
+            </h4>
             <div className="schedule">
                 {this.getDays()}
             </div>
