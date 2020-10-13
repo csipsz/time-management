@@ -4,8 +4,9 @@ This is a React front end and Rails API back end school project for Flatiron Sch
 
 The background is created with flaticon.
 
-INSTRUCTIONS:
-RAILS BACK END:
+<h2>INSTRUCTIONS:</h2>
+
+<h3>RAILS BACK END:<h3>
 To run this app on your local environment, clone this repository.
 
 Navigate to the time-management-api directory and run:
@@ -18,11 +19,12 @@ Then ran the server with the rails s command
 
 This will boot up the Rails web server at http://localhost:3000.
 
-The REACT FRONT END:
+<h3>The REACT FRONT END:<h3>
 
 Navigate to the time-client directory
 
 if you have Node.js: 
+
 run npm start in your terminal
 
 you can update npm with the following command: 
