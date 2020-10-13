@@ -37,7 +37,7 @@ export class TaskForm extends Component {
     render() {
         return (
             <div >
-                <form className="container" onSubmit={this.handleSubmit}>
+                <form autocomplete="off" className="container" onSubmit={this.handleSubmit}>
                     <label htmlFor="title">Title: </label>
                     <input type="text" name="title" id="title" value={this.state.title} onChange={this.handleChange} />
                     <label htmlFor="day">Day: </label>

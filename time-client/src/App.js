@@ -14,7 +14,6 @@ class  App extends Component {
         this.props.fetchTasks()
     }
 
-
   render(){
   return (
     <div className="App">
@@ -36,7 +35,6 @@ class  App extends Component {
 const mapDispatchToProps = dispatch => {
   return {
   fetchTasks: () => dispatch(fetchTasks())
-  
   }
 }
 

@@ -8,12 +8,13 @@ const TaskCard = (props) => {
         <div className="task-card brown">
           <button onClick={() => props.delete(props.task)} className="right btn red lighten-2">X</button>
           <button id={props.task.id} onClick={(e) => props.completion(e.target)} className={props.task.completed ? "right btn green lighten-2" :"right btn blue lighten-2" }>✓</button>
-          {/*<button onClick={(e) => props.history.push('/form')} className={"right btn amber lighten-2"}>+</button>*/}
           <b>{props.task.title}</b><br/>
           <p>{props.task.description}</p>
           <img className="react-logo" src={ReactLogo} alt="react"/>
         </div>
     )
 }
+
+//didn't use withRouter yet
 
 export default withRouter(TaskCard)

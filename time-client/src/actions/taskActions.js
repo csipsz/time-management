@@ -84,5 +84,4 @@ const completeTask = (task) => {
     }
 }
 
-
 export default fetchTasks

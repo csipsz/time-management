@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Task.create(completed: false, day: 'Monday', title: "Funfair", description: 'Go and buy some cotton candy and throw it back up from Titanic')
+Task.create(completed: false, day: 'Monday', title: "Funfair", description: 'Go and buy some cotton candy and do not scream or close your eyes on the roller coaster')
 Task.create(completed: false, day: 'Tuesday', title: "Circus", description: 'Bribe the Clown')
 Task.create(completed: false, day: 'Wednesday', title: "Movie Theater", description: 'Jalapeno eating contest while watching a horror movie')
 Task.create(completed: false, day: 'Thursday', title: "Opera", description: 'Behave  nice for once')
