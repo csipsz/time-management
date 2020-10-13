@@ -21,7 +21,7 @@ render() {
     const { time } = this.state;
     return (
     <div className="digital-clock">
-    <h2>{`${time.toLocaleTimeString().slice(0,4)}  ${time.toLocaleTimeString().slice(8)}`}</h2>
+    <h2>{`${time.getHours()} :  ${time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes()} ${time.getHours() < 12 ? 'AM' : 'PM'}`}</h2>
     <p>{time.toLocaleDateString()}</p>
     </div>
     )
