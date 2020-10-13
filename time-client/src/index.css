@@ -65,5 +65,7 @@
   .digital-clock{
       color: rgb(236, 81, 164);
       border: double black 7px;
+      background-color: rgb(138, 82, 62);
+      /*background-color: coral;*/
   }
 

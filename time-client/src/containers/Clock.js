@@ -20,8 +20,8 @@ componentWillUnmount() {
 render() {
     const { time } = this.state;
     return (
-    <div>
-    <h2 className="digital-clock">{`${time.toLocaleTimeString().slice(0,5)}  ${time.toLocaleTimeString().slice(9)}`}</h2>
+    <div className="digital-clock">
+    <h2>{`${time.toLocaleTimeString().slice(0,5)}  ${time.toLocaleTimeString().slice(9)}`}</h2>
     <p>{time.toLocaleDateString()}</p>
     </div>
     )
