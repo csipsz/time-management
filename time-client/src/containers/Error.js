@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 
 export class Error extends Component {
+
     render() {
         if (this.props.errors.length > 0) {
             return (
@@ -10,7 +11,7 @@ export class Error extends Component {
                 </div>
             )
         } else {
-            return <div></div>
+        return (<div></div>)
         }
     }
 }

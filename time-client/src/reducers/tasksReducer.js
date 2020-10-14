@@ -31,6 +31,14 @@ const taskReducer = (state={tasks: [], loading: false}, action) => {
             tasks: state.tasks.filter(task => task.id !== action.task.id), 
             loading: false
         }
+        case "FETCH_ONE_TASK":
+            return {
+                ...state, 
+                tasks: state.tasks, 
+                loading: false, 
+                current_task: action.task
+
+            }
         default: 
         return state
     }

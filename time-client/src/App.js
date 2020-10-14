@@ -7,6 +7,7 @@ import About from './components/About'
 import TaskForm from './containers/TaskForm';
 import { connect } from 'react-redux'
 import fetchTasks from './actions/taskActions'
+import TaskShowPage from './components/TaskShowPage';
 
 class  App extends Component {
 
@@ -23,12 +24,19 @@ class  App extends Component {
           <Route exact path='/' render={ props => <Week {...props} days={["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]} /> }/>
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
-          <Route path='/form' render={ props => <TaskForm {...props} /> } />
+          <Route path='/form' component={TaskForm} />
+          <Route exact path="/:task_id" component={TaskShowPage} />
           <Route render={ () => <h1 className="red darken-3 white-text">PAGE NOT FOUND</h1> } />
         </Switch>
       </Router>
     </div>
   );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    tasks: state.task.tasks
   }
 }
 
@@ -39,4 +47,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
