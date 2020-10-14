@@ -69,3 +69,9 @@
       /*background-color: coral;*/
   }
 
+  .error-div{
+      background-color: crimson;
+      color: cornsilk;
+      font-size: large;
+  }
+

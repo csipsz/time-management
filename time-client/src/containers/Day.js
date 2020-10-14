@@ -13,15 +13,11 @@ export class Day extends Component {
         this.props.update(completedTask)
     }
 
-    handleLoading = () => {
-        if (this.props.loading){
-            return <div>LOADING...</div>
-        } else {
-            return this.props.tasks.map(task => {
-                if (task.day.toUpperCase() === this.props.name.toUpperCase()){
+    fillDay = () => {
+        return this.props.tasks.map(task => {
+            if (task.day.toUpperCase() === this.props.name.toUpperCase()){
                  return <TaskCard key={task.id} task={task} delete={this.props.delete} completion={this.completion}/>}
-                })
-        }
+            })
     }
 
     render() {
@@ -29,7 +25,7 @@ export class Day extends Component {
         return (
             <div className="indigo customize">
                 <h4 className="day-name">{this.props.name.toUpperCase()}</h4>
-                {this.handleLoading()}
+                {this.fillDay()}
             </div>
         )
     }

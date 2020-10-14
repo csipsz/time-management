@@ -1,3 +1,5 @@
+import React from 'react'
+
 const fetchTasks = () => {
     return (dispatch) => {
         dispatch({type: 'LOAD_TASKS'})
@@ -8,7 +10,7 @@ const fetchTasks = () => {
 
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
-export const createTask = (taskBack) => {
+export const createTask = (taskBack, history) => {
     return (dispatch) => {
         fetch('http://localhost:3001/tasks', {
             method: "POST",
@@ -19,8 +21,14 @@ export const createTask = (taskBack) => {
             body: JSON.stringify(taskBack)
         })
         .then( resp => resp.json() )
-        .then( task => {
-            dispatch(addTask(task))
+        .then( task => { 
+                if (!task.errors){
+                    dispatch(addTask(task))
+                    dispatch({type: "CLEAR_ERROR", errors: []})
+                    history.push('/')
+                } else {
+                    dispatch({type: "ADD_ERROR", errors: task.errors })
+                }
         })
     }
 }

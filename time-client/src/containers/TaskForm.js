@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Pic from '../pic.png'
 import { connect } from 'react-redux'
 import { createTask } from '../actions/taskActions'
+import Error from './Error'
 
 
 export class TaskForm extends Component {
@@ -23,9 +24,8 @@ export class TaskForm extends Component {
             task: this.state
         }
 
-        this.props.createTask(task)
-
-        this.props.history.push('/')
+        this.props.createTask(task, this.props.history)
+        //this.props.history.push('/')
     }
 
     handleChange = (e) => {
@@ -37,7 +37,8 @@ export class TaskForm extends Component {
     render() {
         return (
             <div >
-                <form autocomplete="off" className="container" onSubmit={this.handleSubmit}>
+                <Error/>
+                <form autoComplete="off" className="container" onSubmit={this.handleSubmit}>
                     <label htmlFor="title">Title: </label>
                     <input type="text" name="title" id="title" value={this.state.title} onChange={this.handleChange} />
                     <label htmlFor="day">Day: </label>
@@ -46,7 +47,7 @@ export class TaskForm extends Component {
                     <input type="text" name="description" id="description" value={this.state.description} onChange={this.handleChange} />
                     <input type="submit" value="ADD TO PLANS" className="waves-effect waves-light btn-large pink lighten-2"/>
                 </form>
-                    <img id="clock" src={Pic}/>
+                    <img id="clock" alt="github-wallpaper" src={Pic}/>
             </div>
         )
     }
