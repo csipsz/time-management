@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar'
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
-import Home from './components/Home'
+import Week from './containers/Week'
 import Contact from './components/Contact' 
 import About from './components/About'
 import TaskForm from './containers/TaskForm';
@@ -20,7 +20,7 @@ class  App extends Component {
       <Router>
         <Navbar/>
         <Switch>
-          <Route exact path='/' component={Home}/>
+          <Route exact path='/' render={ props => <Week {...props} days={["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]} /> }/>
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path='/form' component={TaskForm} />
