@@ -1,5 +1,3 @@
-import React from 'react'
-
 const fetchTasks = () => {
     return (dispatch) => {
         dispatch({type: 'LOAD_TASKS'})
@@ -92,16 +90,5 @@ const completeTask = (task) => {
     }
 }
 
-
-////////////////////////////////////////////////
-export const fetchOneTask = (id) => {
-    return (dispatch) => {
-        dispatch({type: 'LOAD_TASKS'})
-        fetch(`http://localhost:3001/tasks/${id}`)
-        .then(response => response.json())
-        .then(task => dispatch({type: 'FETCH_ONE_TASK', task: task}))
-    }
-
-}
 
 export default fetchTasks

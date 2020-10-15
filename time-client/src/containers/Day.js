@@ -8,7 +8,7 @@ export class Day extends Component {
 
     completion = (button) => {
         button.className = "right btn green lighten-2"
-        let completedTask = this.props.tasks.find(task => task.id == button.id)
+        let completedTask = this.props.tasks.find(task => task.id === parseInt(button.id, 10))
         completedTask.completed = true
         this.props.update(completedTask)
     }
