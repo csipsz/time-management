@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Task from './Task'
+import Footer from './Footer'
 
 export class TaskShowPage extends Component {
 
@@ -11,17 +12,20 @@ export class TaskShowPage extends Component {
 
     handleHover = (e) => {
         this.setState({
-            color: "red", 
-            size: '300px', 
+            color: "deepskyblue", 
+            size: '200px', 
         });
     }
 
 
     render(){
         return (
+            <div>
             <div className="container showpage">
-                I am the task show
+                YOUR TASK
                 <Task hover={this.handleHover}  size={this.state.size} color={this.state.color} task={this.props.tasks.find(task => task.id === parseInt(this.props.match.params.task_id, 10))}/>
+            </div>
+            <Footer/>
             </div>
         )
     }

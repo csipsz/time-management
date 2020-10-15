@@ -78,7 +78,6 @@
   .showpage {
       height: 800px;
       width: 600px;
-      margin: 200px;
       text-align: center;
       color: darkseagreen;
       font-size: larger;
@@ -88,6 +87,15 @@
 
   .heart {
       font-size: 100px;
+  }
+
+  .taskdiv {
+      margin: 30px
+  }
+
+  .footer {
+      background-color: firebrick;
+      height: 75px;
   }
 
 

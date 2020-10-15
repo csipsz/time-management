@@ -25,7 +25,7 @@ class  App extends Component {
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path='/form' component={TaskForm} />
-          <Route exact path="/:task_id" component={TaskShowPage} />
+          <Route exact path="/tasks/:task_id" component={TaskShowPage} />
           <Route render={ () => <h1 className="red darken-3 white-text">PAGE NOT FOUND</h1> } />
         </Switch>
       </Router>
