@@ -75,5 +75,19 @@
       font-size: large;
   }
 
+  .showpage {
+      height: 800px;
+      width: 600px;
+      margin: 200px;
+      text-align: center;
+      color: darkseagreen;
+      font-size: larger;
+      font-weight: bolder;
+      background-color: darkorchid;
+  }
+
+  .heart {
+      font-size: 100px;
+  }
 
 

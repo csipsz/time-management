@@ -8,7 +8,7 @@ const errorReducer = (state={ errors: []}, action) => {
         case "CLEAR_ERROR": 
         return {
             ...state,
-                errors: [action.errors]  
+                errors: []  
         }
         default: 
         return state

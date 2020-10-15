@@ -1,15 +1,27 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Test from './Test'
+import Task from './Task'
 
 export class TaskShowPage extends Component {
 
+    constructor() {
+        super();
+        this.state = { color: 'black', size: "50px"}
+    }
+
+    handleHover = (e) => {
+        this.setState({
+            color: "red", 
+            size: '300px', 
+        });
+    }
+
+
     render(){
-        console.log(this.props)
         return (
-            <div>
+            <div className="container showpage">
                 I am the task show
-                <Test task={this.props.tasks.find(task => task.id === parseInt(this.props.match.params.task_id, 10))}/>
+                <Task hover={this.handleHover}  size={this.state.size} color={this.state.color} task={this.props.tasks.find(task => task.id === parseInt(this.props.match.params.task_id, 10))}/>
             </div>
         )
     }
