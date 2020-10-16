@@ -7,12 +7,12 @@ export class TaskShowPage extends Component {
 
     constructor() {
         super();
-        this.state = { color: 'black', size: "50px"}
+        this.state = { color: 'white', size: "50px"}
     }
 
     handleHover = (e) => {
         this.setState({
-            color: "deepskyblue", 
+            color: "red", 
             size: '200px', 
         });
     }
@@ -22,7 +22,6 @@ export class TaskShowPage extends Component {
         return (
             <div>
             <div className="container showpage">
-                YOUR TASK
                 <Task hover={this.handleHover}  size={this.state.size} color={this.state.color} task={this.props.tasks.find(task => task.id === parseInt(this.props.match.params.task_id, 10))}/>
             </div>
             <Footer/>

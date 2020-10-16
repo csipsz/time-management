@@ -7,7 +7,7 @@ import TaskCard from '../components/TaskCard';
 export class Day extends Component {
 
     completion = (button) => {
-        button.className = "right btn green lighten-2"
+        button.className = "right btn green"
         let completedTask = this.props.tasks.find(task => task.id === parseInt(button.id, 10))
         completedTask.completed = true
         this.props.update(completedTask)
@@ -23,8 +23,8 @@ export class Day extends Component {
     render() {
 
         return (
-            <div className="indigo customize">
-                <h4 className="day-name">{this.props.name.toUpperCase()}</h4>
+            <div className="customize">
+                <h4 className="day-name ">{this.props.name.toUpperCase()}</h4>
                 {this.fillDay()}
             </div>
         )

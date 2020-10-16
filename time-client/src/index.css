@@ -9,13 +9,15 @@
       overflow: hidden;
       border: black solid;
       margin: 3px;
+      background-color:rgb(245, 221, 116);
   }
 
   .customize {
     float: left;
     width: 13.5%;
     border: 2px solid;
-    margin: 4px
+    margin: 4px;
+    background-color: dodgerblue
   }
 
   .day-name {
@@ -25,17 +27,17 @@
 
   .schedule {
       border: black 4px solid;
-      background-color: cornflowerblue;
       height: 1000px;
       overflow: hidden;
+      background-image: url(pattern3.png);
   }
 
   .weekplan {
       text-align: center;
       font-weight: 700;
       padding: 50px;
-      font-family: fantasy;
-      background-color: brown darken-2;
+      font-family: fantasy; 
+      
   }
 
   .App {
@@ -63,11 +65,10 @@
   }
 
   .digital-clock{
-      color: rgb(236, 81, 164);
+      color: floralwhite;
       border: double black 7px;
-      background-color: rgb(138, 82, 62);
-      /*background-color: coral;*/
-  }
+      background-color: dodgerblue;
+      }
 
   .error-div{
       background-color: crimson;
@@ -76,26 +77,31 @@
   }
 
   .showpage {
-      height: 800px;
+      height: 600px;
       width: 600px;
+      margin-top: 100px;
+      margin-bottom: 50px;
       text-align: center;
-      color: darkseagreen;
+      color: whitesmoke;
+      font-family: monospace;
       font-size: larger;
       font-weight: bolder;
-      background-color: darkorchid;
-  }
-
-  .heart {
-      font-size: 100px;
+      background-image: url(pic.png);
   }
 
   .taskdiv {
-      margin: 30px
+      padding: 20px
   }
 
   .footer {
-      background-color: firebrick;
-      height: 75px;
+      padding: 5px;
+      color: whitesmoke;
+      background-color: rgb(49, 48, 48);
+      height: 105px;
+  }
+
+  html {
+      background-color: grey;
   }
 
 

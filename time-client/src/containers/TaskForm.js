@@ -45,7 +45,7 @@ export class TaskForm extends Component {
                     <input type="text" name="day" id="day" value={this.state.day} onChange={this.handleChange} />
                     <label htmlFor="description">Description: </label>
                     <input type="text" name="description" id="description" value={this.state.description} onChange={this.handleChange} />
-                    <input type="submit" value="ADD TO PLANS" className="waves-effect waves-light btn-large pink lighten-2"/>
+                    <input type="submit" value="ADD TO PLANS" className="waves-effect waves-light btn-large blue accent-3"/>
                 </form>
                     <img id="clock" alt="github-wallpaper" src={Pic}/>
             </div>
