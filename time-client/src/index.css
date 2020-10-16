@@ -17,7 +17,6 @@
     width: 13.5%;
     border: 2px solid;
     margin: 4px;
-    background-color: dodgerblue
   }
 
   .day-name {
@@ -67,7 +66,7 @@
   .digital-clock{
       color: floralwhite;
       border: double black 7px;
-      background-color: dodgerblue;
+      background-color: rgb(44, 43, 43)
       }
 
   .error-div{
@@ -104,4 +103,9 @@
       background-color: grey;
   }
 
+
+  .stylegroup {
+      background-color: rgb(116, 135, 245);
+      background-color: rgb(106, 196, 238);
+  }
 

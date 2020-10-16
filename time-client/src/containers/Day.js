@@ -23,8 +23,8 @@ export class Day extends Component {
     render() {
 
         return (
-            <div className="customize">
-                <h4 className="day-name ">{this.props.name.toUpperCase()}</h4>
+            <div className="customize stylegroup">
+                <h4 className="day-name white-text">{this.props.name.toUpperCase()}</h4>
                 {this.fillDay()}
             </div>
         )

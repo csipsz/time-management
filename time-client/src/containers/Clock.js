@@ -20,7 +20,7 @@ componentWillUnmount() {
 render() {
     const { time } = this.state;
     return (
-    <div className="digital-clock">
+    <div className="digital-clock stylegroup">
     <h2>{`${time.getHours()} :  ${time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes()} ${time.getHours() < 12 ? 'AM' : 'PM'}`}</h2>
     <p>{time.toLocaleDateString()}</p>
     </div>

@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className="nav-wrapper blue accent-3">
+        <nav className="nav-wrapper stylegroup">
             <div className="container ">
                 <ul>
                     <li><NavLink exact to="/">HOME</NavLink></li>
