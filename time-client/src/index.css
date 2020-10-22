@@ -85,7 +85,6 @@
       font-family: monospace;
       font-size: larger;
       font-weight: bolder;
-      background-image: url(pic.png);
   }
 
   .taskdiv {
@@ -105,7 +104,6 @@
 
 
   .stylegroup {
-      background-color: rgb(116, 135, 245);
       background-color: rgb(106, 196, 238);
   }
 

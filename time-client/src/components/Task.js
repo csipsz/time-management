@@ -1,14 +1,18 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+//import { withRouter } from 'react-router-dom'
 
-const Task = (props) => {
-    return (
+const Task = ({match, tasks}) => {
+    let task = tasks.find(task => task.id === parseInt(match.params.task_id, 10))
+     return (
+        task ?
         <div className="taskdiv">
-            {props.task ? <div><div>{props.task.title}</div>{props.task.description}</div> : "Loading"}
-            <div style={{color: props.color}}>BACK</div>
-            <div onClick={e => props.history.push('/')} onMouseEnter={e => props.hover(e)} className="heart" style={{color: props.color, fontSize: props.size}}>←</div>
+            {task.description}
         </div>
+        : 
+        
+        <div>Loading...</div>
     )
+     
 }
 
-export default withRouter(Task)
+export default Task

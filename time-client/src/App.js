@@ -7,7 +7,7 @@ import About from './components/About'
 import TaskForm from './containers/TaskForm';
 import { connect } from 'react-redux'
 import fetchTasks from './actions/taskActions'
-import TaskShowPage from './components/TaskShowPage';
+import TaskPage from './components/TaskPage';
 
 class  App extends Component {
 
@@ -25,7 +25,7 @@ class  App extends Component {
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path='/form' component={TaskForm} />
-          <Route exact path="/tasks/:task_id" component={TaskShowPage} />
+          <Route path="/tasks" render={routerProps => <TaskPage {...routerProps} tasks={this.props.tasks}/>} />
           <Route render={ () => <h1 className="red darken-3 white-text">PAGE NOT FOUND</h1> } />
         </Switch>
       </Router>

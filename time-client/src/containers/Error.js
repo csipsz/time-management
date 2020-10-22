@@ -11,7 +11,7 @@ export class Error extends Component {
                 <div className="error-div">
                     {this.props.errors}
                 </div>
-                    <img src={Errorboy}/>
+                    <img src={Errorboy} alt={"errorBoy"}/>
                 </div>
             )
         } else {
