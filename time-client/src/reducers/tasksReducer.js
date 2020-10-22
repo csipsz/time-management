@@ -15,21 +15,18 @@ const taskReducer = (state={tasks: [], loading: false}, action) => {
         case "ADD_TASK":
             return {
                 ...state,
-                tasks: state.tasks.concat(action.task), 
-                loading: false
+                tasks: state.tasks.concat(action.task)
             }
         case "UPDATE_TASK":
             return {
                 ...state, 
-                tasks: state.tasks, 
-                loading: false
+                tasks: state.tasks
             }
 
         case "DELETE_TASK": 
         return {
             ...state,
-            tasks: state.tasks.filter(task => task.id !== action.task.id), 
-            loading: false
+            tasks: state.tasks.filter(task => task.id !== action.task.id)
         }
         default: 
         return state
