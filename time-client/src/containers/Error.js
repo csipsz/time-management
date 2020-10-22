@@ -4,18 +4,22 @@ import Errorboy from '../errorboy.png'
 
 export class Error extends Component {
 
+    
     render() {
+
+        const getErrors = this.props.errors.map((error, i) => <span key={i}>{" - " + error + " "}</span>)
+        
         if (this.props.errors.length > 0) {
             return (
-                <div>
+                <>
                 <div className="error-div">
-            {this.props.errors.map((error, i) => <span key={i}>{" - " + error + " "}</span>)}
+                    {getErrors}
                 </div>
                     <img src={Errorboy} alt={"errorBoy"}/>
-                </div>
+                </>
             )
         } else {
-        return (<div></div>)
+        return (<></>)
         }
     }
 }
