@@ -4,7 +4,6 @@ import Errorboy from '../errorboy.png'
 
 export class Error extends Component {
 
-    
     render() {
 
         const getErrors = this.props.errors.map((error, i) => <span key={i}>{" - " + error + " "}</span>)
