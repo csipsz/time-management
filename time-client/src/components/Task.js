@@ -1,5 +1,4 @@
 import React from 'react'
-//import { withRouter } from 'react-router-dom'
 
 const Task = ({match, tasks, history}) => {
     let task = tasks.find(task => task.id === parseInt(match.params.task_id, 10))

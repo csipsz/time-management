@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
 
 //COMPONENT IMPORTS
-import Week from './containers/Week'
+import Week from './components/Week'
 import About from './components/About'
 import TaskForm from './containers/TaskForm';
 import TaskPage from './components/TaskPage';
