@@ -9,7 +9,6 @@ const Navbar = () => {
                     <li><NavLink exact to="/">HOME</NavLink></li>
                     <li><NavLink to="/form">+ADD</NavLink></li>
                     <li><NavLink to="/about">ABOUT</NavLink></li>
-                    <li><NavLink to="/contact">CONTACT</NavLink></li>
                     <li><NavLink to="/tasks">TASKS</NavLink></li>
                 </ul>
             </div>
