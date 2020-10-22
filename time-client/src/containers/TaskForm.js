@@ -7,8 +7,8 @@ import Error from './Error'
 
 export class TaskForm extends Component {
 
-    constructor(props){
-        super(props)
+    constructor(){
+        super()
         this.state = {
             title: "", 
             day: "", 
@@ -20,12 +20,12 @@ export class TaskForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
 
-        const task = {
-            task: this.state
-        }
+        // const task = {
+        //     task: this.state
+        // }
+        // this might be cleaner, but works without
 
-        this.props.createTask(task, this.props.history)
-        //this.props.history.push('/')
+        this.props.createTask(this.state, this.props.history)
     }
 
     handleChange = (e) => {
