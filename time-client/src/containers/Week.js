@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Day from './Day'
-import Clock from './Clock'
+import Clock from '../components/Clock'
 
 export class Week extends Component {
 

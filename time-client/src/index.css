@@ -52,8 +52,9 @@
   }
 
 .appinfo {
+    margin-top: 50px;
     background-image: url(pic.png);
-    height: 850px; 
+    height: 780px; 
   }
 
   .appdetails {
@@ -105,5 +106,9 @@
 
   .stylegroup {
       background-color: rgb(106, 196, 238);
+  }
+
+  #back:hover {
+      color: darkslateblue
   }
 

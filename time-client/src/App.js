@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
+
+//ROUTING RELATED IMPORTS
 import Navbar from './components/Navbar'
 import { Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+
+//COMPONENT IMPORTS
 import Week from './containers/Week'
 import Contact from './components/Contact' 
 import About from './components/About'
 import TaskForm from './containers/TaskForm';
+import TaskPage from './components/TaskPage';
+
+//REDUX RELATED IMPORTS
 import { connect } from 'react-redux'
 import fetchTasks from './actions/taskActions'
-import TaskPage from './components/TaskPage';
 
 class  App extends Component {
 
@@ -19,9 +25,9 @@ class  App extends Component {
   return (
     <div className="App">
       <Router>
-        <Navbar/>
+      <Navbar/>
         <Switch>
-          <Route exact path='/' render={ props => <Week {...props} days={["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]} /> }/>
+          <Route exact path='/' render={ routerProps => <Week {...routerProps} days={["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]} /> }/>
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path='/form' component={TaskForm} />
