@@ -9,7 +9,7 @@ export class Error extends Component {
             return (
                 <div>
                 <div className="error-div">
-                    {this.props.errors}
+            {this.props.errors.map((error, i) => <span key={i}>{" - " + error + " "}</span>)}
                 </div>
                     <img src={Errorboy} alt={"errorBoy"}/>
                 </div>

@@ -3,7 +3,7 @@ const errorReducer = (state={ errors: []}, action) => {
         case "ADD_ERROR": 
             return {
                 ...state,
-                errors: [action.errors]
+                errors: [...action.errors]
             }
         case "CLEAR_ERROR": 
         return {
