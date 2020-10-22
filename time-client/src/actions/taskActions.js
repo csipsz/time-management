@@ -79,16 +79,20 @@ export const updateTask = (taskBack) => {
             body: JSON.stringify(taskBack)
         })
         .then( resp => resp.json() )
-        .then( task => dispatch(completeTask(task)))
+        .then( task => dispatch({type: 'UPDATE_TASK'}))
         }
     }
 
-const completeTask = (task) => {
-    return {
-        type: 'UPDATE_TASK', 
-        task
-    }
-}
+//I MIGHT NOT NEED THIS AT ALL
+//my reducer uses state.tasks and not action.task
+
+
+// const completeTask = (task) => {
+//     return {
+//         type: 'UPDATE_TASK', 
+//         task
+//     }
+// }
 
 
 export default fetchTasks
