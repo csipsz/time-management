@@ -34,8 +34,7 @@ export class Day extends Component {
 
 const mapStateToProps = state => {
     return {
-      tasks: state.task.tasks, 
-      loading: state.loading
+      tasks: state.task.tasks
     }
   }
 
