@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Pic from '../pic.png'
 import { connect } from 'react-redux'
 import { createTask } from '../actions/taskActions'
 import Error from './Error'
+import Pic from '../pic.png'
 
 
 export class TaskForm extends Component {
