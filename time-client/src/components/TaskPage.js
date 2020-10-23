@@ -9,7 +9,7 @@ const TaskPage = ({match, tasks}) => {
         <div className="container showpage">
            <TaskList tasks={tasks}/>
            <Route path={`${match.url}/:task_id`} render={routerProps => <Task {...routerProps} tasks={tasks}/>}/>
-           <Route exact path={match.url} render={() => <h3>Check out any tasks</h3>}/>
+           <Route exact path={match.url} render={() => <h5>Check out any tasks</h5>}/>
         </div>
     )
 }

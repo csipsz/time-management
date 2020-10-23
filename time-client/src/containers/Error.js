@@ -6,7 +6,7 @@ export class Error extends Component {
 
     render() {
 
-        const getErrors = this.props.errors.map((error, i) => <span key={i}>{" - " + error + " "}</span>)
+        const getErrors = this.props.errors.map((error, i) => <span key={i}>{" | " + error + " | "}</span>)
         
         if (this.props.errors.length > 0) {
             return (
