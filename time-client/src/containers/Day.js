@@ -3,8 +3,13 @@ import {connect} from 'react-redux';
 import {removeTask} from '../actions/taskActions'
 import {updateTask} from '../actions/taskActions'
 import TaskCard from '../components/TaskCard';
+import Selectorstuff from '../components/Select'
 
 export class Day extends Component {
+
+    state = { 
+        completed: null
+    }
 
     completion = (button) => {
         button.className = "right btn green"
@@ -15,15 +20,24 @@ export class Day extends Component {
 
     fillDay = () => {
         return this.props.tasks.map(task => {
-            if (task.day.toUpperCase() === this.props.name.toUpperCase()){
+            if (task.day.toUpperCase() === this.props.name.toUpperCase() && (task.completed === this.state.completed || this.state.completed === null )){
                  return <TaskCard key={task.id} task={task} delete={this.props.delete} completion={this.completion}/>}
             })
+    }
+
+
+    filterDays = (completedstuff) => {
+        this.setState({
+            completed: completedstuff
+        })
     }
 
     render() {
 
         return (
+
             <div className="customize stylegroup">
+                <Selectorstuff filterDays={this.filterDays}/>
                 <h4 className="day-name white-text">{this.props.name.toUpperCase()}</h4>
                 {this.fillDay()}
             </div>

@@ -9,7 +9,9 @@ const fetchTasks = () => {
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 export const createTask = (taskBack, history) => {
+    console.log('b')
     return (dispatch) => {
+        console.log('c')
         fetch('http://localhost:3001/tasks', {
             method: "POST",
             headers: {
@@ -20,6 +22,7 @@ export const createTask = (taskBack, history) => {
         })
         .then( resp => resp.json() )
         .then( task => { 
+            console.log('d')
                 if (!task.errors){
                     dispatch(addTask(task))
                     dispatch({type: "CLEAR_ERROR", errors: []})
@@ -28,7 +31,9 @@ export const createTask = (taskBack, history) => {
                     dispatch({type: "ADD_ERROR", errors: task.errors })
                 }
         })
+        console.log('e')
     }
+    console.log('f')
 }
 
 const addTask = (task) => {

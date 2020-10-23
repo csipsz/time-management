@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { createTask } from '../actions/taskActions'
 import Error from './Error'
 import Pic from '../pic.png'
+import Selectorstuff from '../components/Select'
 
 
 export class TaskForm extends Component {
@@ -19,13 +20,14 @@ export class TaskForm extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-
         // const task = {
-        //     task: this.state
-        // }
-        // this might be cleaner, but works without
-
+            //     task: this.state
+            // }
+            // this might be cleaner, but works without
+            
+        console.log('a')
         this.props.createTask(this.state, this.props.history)
+        console.log('g')
     }
 
     handleChange = (e) => {
