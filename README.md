@@ -1,6 +1,6 @@
 <h1>TIME MANAGEMENT APPLICATION</h1>
 An application to organize your weekly programs and responsibilities.
-This is a React front end and Rails API back end school project for Flatiron School. It is made with Redux and Thunk Middleware.
+This is a React front end and Rails API back end project. It is made with Redux and Thunk Middleware.
 
 The background is created with flaticon.
 
